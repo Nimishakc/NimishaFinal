@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DASHBOARD</title>
+<style>
+    nav {
+    float : left;
+    width : 20%;
+    height : 500px;
+    padding : 20px;
+    }
+    </style>
+</head>
+{% block content %}
+{% load static %}
+<body style="background-image:url('{% static 'img_2.png' %}'); background-repeat:no-repeat;background-size:100%;">
+<header>
+    <h2>DASHBOARD</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <form action="onappro" method="POST">{%csrf_token%}
+                    <li><input type="submit" value="ONLINE ORDERS"</li></form><br>
+                <form action="offapro" method="POST">{%csrf_token%}
+                    <li><input type="submit" value="OFFLINE ORDERS"</></li></form><br>
+                <li><a href = "logout" >LOGOUT</a></li>
+            </ul>
+        </nav>
+    </section>
+</body>
+</html>
+{% endblock %}

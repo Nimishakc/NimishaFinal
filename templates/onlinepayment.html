@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>ONLINE PAYMENT</title>
+</head>
+{% block content %}
+{% load static %}
+<body style="background-image:url('{% static 'img_2.png' %}'); background-repeat:no-repeat;background-size:100%;">
+<h1 style="text-align: center;border-collapse: collapse;border: 2px solid black;font-family: cursive;color: darkblue;font-size: xx-large;">ONLINE PAYMENT</h1>
+<br><br><br>
+<form action="onlineok" method ="POST">{% csrf_token %}
+    <center>
+        <h3>ONLINE PAYMENT REGISTRATION FORM</h3>
+        <h4>PLEASE FILL ALL THE FIELDS CAREFULLY...</h4></center>
+    <table style="width:100%;margin-right:auto;margin-left:auto;margin-top:50px;">
+        <tr>
+        <tr>
+            <td style="float:right;">NAME :</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td style="float:right;">ADDRESS :</td>
+            <td><input type="text" name="address"></td>
+        </tr>
+        <tr>
+            <td style="float:right;">CITY :</td>
+            <td><input type="text" name="city"></td>
+        </tr>
+        <tr>
+            <td style="float:right;">PHONE NUMBER:</td>
+            <td><input type="text" name="ph"></td>
+        </tr>
+        <tr>
+            <td style="float:right;">MAIL ID :</td>
+            <td><input type="text" name="mail"></td>
+        </tr>
+         <tr>
+            <td style="float:right;">ITEM :</td>
+            <td><input type="text" name="item"></td>
+        </tr>
+         <tr>
+            <td style="float:right;">MODEL :</td>
+            <td><input type="text" name="imo"></td>
+        </tr>
+         <tr>
+            <td style="float:right;">CARD NUMBER :</td>
+            <td><input type="text" name="credit"></td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td></td>
+        <td>
+        <input type = "submit" value="MAKE PAYMENT"  style="background-color:green;color:white;width:120px;height:30px;">
+        </td>
+        </td>
+        </tr>
+    </table>
+</form>
+<div>
+    <center>
+        {% for message in messages %}
+        <h3> {{message}} </h3>
+        {% endfor %}
+    </center>
+    </div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AIR CONDITIONERS</title>
+</head>
+{% block content %}
+{% load static %}
+<body style="background-image:url('{% static 'img_2.png' %}');
+                                             background-repeat:no-repeat;background-size:125%;">
+<h1 style="text-align: center;border-collapse: collapse;border: 2px solid black;font-family: cursive;font-size: xx-large;">AIR CONDITIONERS</h1>
+<form action="buy" method ="POST">{% csrf_token %}
+<table style="width:100%;border-style:solid;margin-right:auto;margin-left:auto;margin-top:50px;">
+		<tr>
+			<th><h2>MODEL</h2></th>
+			<th><h2>SPECIFICATIONS</h2></th>
+			<th><h2>CONFIRM</h2></th>
+			</tr>
+			<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+			<tr>
+				<td><center><img src = "{% static 'img.png' %}"height="100" width="150"></center></td>
+				<td> <center> BRAND-VOLTAS MODEL - 1AA <br>100% COPPER<br>
+					ECO FRIENDLY REFRIGERANT<br>
+HIGH AMBIENT COOLING<br>
+MULTI STAGE FILTRATION<br>
+Rs - 44999<br>
+1 week delivery time </center></td>
+<td><center><input type="submit" value="BUY NOW" formtarget="_blank" style="background-color:green;color:white;
+                      width:80px;height:30px;"></center></td>
+</tr>
+	<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+	<tr>
+	<td><center><img src = "{% static 'mitsubishi.png' %}"height="100" width="150"></center></td>
+	<td> <center> BRAND-MITSUBHISHI MODEL-1AB<br>LCD REMOTE CONTROL<br>COMPUTERISED DE-HUMIDIFICATION<br>
+NEW LEV CONTROL<br>
+		price - Rs 35888<br>
+1 week delivery time</center></td>
+<td><center><input type="submit" value="BUY NOW" formtarget="_blank" style="background-color:green;color:white;
+                       width:80px;height:30px;"></center></td>
+</tr>
+	<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+<tr>
+	<td><center><img src = "{% static 'Toshiba.jpg' %}"height="100" width="150"></center></td>
+	<td> <center> BRAND-THOSHIBA MODEL-1AC<br>HI-POWER<br>
+PRESET<br>
+FANSPEED CONTROL<br>
+		SELF CLEANING <br>
+		TIMER<br>
+Rs - 35999<br>
+1 week delivery time</center></td>
+<td><center><input type="submit" value="BUY NOW" formtarget="_blank" style="background-color:green;color:white;
+                                width:80px;height:30px;"></center></td>
+</tr>
+</table>
+</body>
+</html>
+{% endblock %}

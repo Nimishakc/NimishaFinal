@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTRATION FORM</title>
+</head>
+{% block content %}
+{% load static %}
+<body style="background-image:url('{% static 'img_2.png' %}'); background-repeat:no-repeat;background-size:100%;">
+<h1 style="text-align: center;border-collapse: collapse;border: 2px solid black;font-family: cursive;color: darkblue;font-size: xx-large;">PAYMENT METHOD</h1>
+<br>
+<center>
+<h3>PLEASE SELECT PAYMENT METHOD</h3>
+<center>
+<form action="onpay" method ="POST">{% csrf_token %}
+    <input type = "submit" value="ONLINE PAYMENT" formtarget="_blank"  style="background-color:green;color:white;width:150px;height:30px;"></form>
+<form action="offpay" method ="POST">{% csrf_token %}
+    <input type = "submit" value="CASH ON DELIVERY" formtarget="_blank" style="background-color:green;color:white;width:150px;height:30px;"></form>
+</center>
+</body>
+</html>
+{% endblock %}

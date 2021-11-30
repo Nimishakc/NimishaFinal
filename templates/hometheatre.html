@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME THEATRES</title>
+</head>
+{% block content %}
+{% load static %}
+<body style="background-image:url('{% static 'img_2.png' %}'); background-repeat:no-repeat;background-size:125%;">
+<h1 style="text-align: center;border-collapse: collapse;border: 2px solid black;font-family: cursive;font-size: xx-large;">HOME THEATRES</h1>
+<form action="buy" method ="POST">{% csrf_token %}
+<table style="width:100%;border-style:solid;margin-right:auto;margin-left:auto;margin-top:50px;">
+		<tr>
+			<th><h2>MODEL</h2></th>
+			<th><h2>SPECIFICATIONS</h2></th>
+			<th><h2>CONFIRM</h2></th>
+			</tr>
+			<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+			<tr>
+				<td><center><img src = "{% static 'sonyht.png' %}"height="100" width="150"></center></td>
+				<td> <center> BRAND-SONY MODEL - 1HA <br>Experience Dolby Atmos in a 7.1.2ch<br>
+					Maintain quality from source to screen with 4K HDR support and HDCP 2.21<br>
+Rs - 60999<br>
+1 week delivery time </center></td>
+<td><center><input type="submit" value="BUY NOW" formtarget="_blank" style="background-color:green;color:white;
+                                                width:80px;height:30px;"></center></td>
+</tr>
+	<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+	<tr>
+	<td><center><img src = "{% static 'philips ht.png' %}"height="100" width="150"></center></td>
+	<td> <center> BRAND-PHILIPS MODEL-1HB<br>Dolby Digital for ultimate movie experience<br>1000W RMS power delivers great sound for movies and music<br>
+Plays DVD, VCD, CD and USB devices<br>
+		price - Rs 80888<br>
+1 week delivery time</center></td>
+<td><center><input type="submit" value="BUY NOW" formtarget="_blank" style="background-color:green;color:white;width:80px;height:30px;"></center></td>
+</tr>
+	<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+<tr>
+	<td><center><img src = "{% static 'jbl ht.png' %}"height="100" width="150"></center></td>
+	<td> <center> BRAND-JBL MODEL-1HC<br>5.1 surround sound<br>
+detachable speaker<br>
+thrilling bass<br>
+Rs - 40999<br>
+1 week delivery time</center></td>
+<td><center><input type="submit" value="BUY NOW" formtarget="_blank" style="background-color:green;color:white;width:80px;height:30px;"></center></td>
+</tr>
+</table>
+</body>
+</html>
+{% endblock %}

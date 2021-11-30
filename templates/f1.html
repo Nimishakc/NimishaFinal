@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MARKET PLACE</title>
+</head>
+{% block content %}
+{% load static %}
+<body style="background-image:url('{% static 'img_1.png' %}'); background-repeat:no-repeat;background-size:110%;">
+<h1 style="text-align: center;border-collapse: collapse;border: 2px solid black;font-family: Timesneuroman;color: darkblue;font-size: xx-large;">WELCOME TO E-WORLD</h1><br></br>
+<h3 style="font-family:cursive;">An exclusive online store for home appliances..<br>Select from our wide range of products...</b></h3><br>
+<center>
+    <a href = "tv">
+        <img src = "{% static 'e2.png' %}" title="TV" height="200" width="250" alt="image not found"></a>
+    <a href = "mobile">
+        <img src = "{% static 'e3.png' %}" title="MOBILE PHONE" height="200" width="250" alt="image not found"></a>
+    <a href = "theatre">
+        <img src = "{% static 'e4.png' %}" title="HOME THEATRE" height="200" width="250" alt="image not found"></a>
+    <a href = "air">
+        <img src = "{% static 'e5.png' %}" title="AIR CONDITIONER" height="200" width="250" alt="image not found"></a>
+</center>
+</body>
+</html>
+{% endblock %}
